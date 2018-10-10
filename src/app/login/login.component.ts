@@ -13,7 +13,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-<<<<<<< HEAD
 
 export class LoginComponent implements OnInit {
  
@@ -40,13 +39,6 @@ export class LoginComponent implements OnInit {
     
     
     )
-=======
-export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
->>>>>>> fa920c35fefcdcce94e346e9b67fb86545aaac4f
   }
 
 }

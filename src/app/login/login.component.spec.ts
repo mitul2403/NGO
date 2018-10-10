@@ -10,6 +10,7 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ LoginComponent ]
     })
+    
     .compileComponents();
   }));
 
