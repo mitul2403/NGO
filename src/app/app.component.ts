@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material'
 import {LoginComponent} from  '../app/login/login.component'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

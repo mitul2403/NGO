@@ -21,25 +21,24 @@ import { LoginComponent } from './login/login.component'
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material';
+import {LoginService} from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
 // import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,MynavComponent, LoginComponent
+    AdminComponent,MynavComponent, LoginComponent, RegisterComponent
   ],
   imports: [
     BrowserModule,CommonModule,
     MatToolbarModule,BrowserAnimationsModule,
     MatCheckboxModule,MatSidenavModule,MatButtonModule,
     MatIconModule,MatListModule,MatInputModule,FormsModule,
-   ReactiveFormsModule,MatDialogModule
-    
-    
-    
-
-
+   ReactiveFormsModule,MatDialogModule,
+   HttpClientModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent],
   entryComponents:[LoginComponent]
 })
