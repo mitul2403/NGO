@@ -14,8 +14,6 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
