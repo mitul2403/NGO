@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators,FormsModule} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {LoginService} from '../services/login.service'
 import { MatIconModule } from '@angular/material';
+=======
+import { Component, OnInit } from '@angular/core';
+
+>>>>>>> fa920c35fefcdcce94e346e9b67fb86545aaac4f
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+<<<<<<< HEAD
 
 export class LoginComponent implements OnInit {
  
@@ -34,6 +40,13 @@ export class LoginComponent implements OnInit {
     
     
     )
+=======
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> fa920c35fefcdcce94e346e9b67fb86545aaac4f
   }
 
 }
