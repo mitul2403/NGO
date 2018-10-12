@@ -4,6 +4,7 @@ import { EventManagementComponent } from './event-management.component';
 
 describe('EventManagementComponent', () => {
   let component: EventManagementComponent;
+
   let fixture: ComponentFixture<EventManagementComponent>;
 
   beforeEach(async(() => {

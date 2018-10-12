@@ -1,3 +1,91 @@
-<p>
-  event-management works!
-</p>
+<form [formGroup]="eventRegistration" (ngSubmit)='addEvents()'>
+  <div align="center">
+    <table>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Event Name" name="eventName" formControlName="eventName">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <textarea matInput placeholder="Event desc" name="eventdescription" formControlName="eventdescription"></textarea>
+          </mat-form-field>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          <mat-select placeholder="Categories" formControlName="event_categories">
+            <mat-option *ngFor="let cat of eventCategories" [value]="cat">
+              {{cat}}</mat-option>
+          </mat-select>
+        </td>
+
+      </tr>
+      <br>
+      <!-- <tr>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="startDate" [matDatepicker]="myDatepicker1" formControlName="endDate">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker1></mat-datepicker>
+
+        </mat-form-field> </td>
+        <td>
+            <mat-form-field>
+              <input matInput placeholder="endDate" [matDatepicker]="myDatepicker2" formControlName="startDate">
+              <mat-datepicker-toggle matSuffix [for]="myDatepicker2"></mat-datepicker-toggle>
+              <mat-datepicker #myDatepicker2></mat-datepicker>
+
+          </mat-form-field> </td>
+
+      </tr> -->
+      <tr>
+        <td><input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Start Time" formControlName="startTime">
+          <owl-date-time #dt1></owl-date-time>
+        </td>
+        <td><input [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="End Time" formControlName="endTime">
+          <owl-date-time #dt2></owl-date-time>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Event Location" name="eventLocation" formControlName="eventLocation">
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-select placeholder="allow registration" formControlName="regActive">
+            <mat-option *ngFor="let i of isEventActive" [value]="i">
+              {{i}}</mat-option>
+          </mat-select>
+        </td>
+      <tr>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Adult Ticket price" name="adultPrice" formControlName="adultPrice">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Child Ticket price" name="childPrice" formControlName="childPrice">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="file" (change)="onFileSelected($event)" formControlName="eventIamge"> </td>
+      </tr>
+      <br>
+      <br>
+      <tr>
+        <td><button mat-button>Add Event </button></td>
+        <ng2-toasty></ng2-toasty>
+        <td><button mat-button (click)="clearForm()" >Clear</button></td>
+      <tr>
+
+    </table>
+  </div>
+</form>
